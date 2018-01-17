@@ -15,6 +15,9 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
+//
+//
+//
 
 var data = {
     "message": "操作完成！",
@@ -85,12 +88,12 @@ var buzzTypes = {
     "message":"操作完成！",
     "responseCode":"0",
     "result":[
-        {"timeSpans":{},"alertTime":0,"finishTimeOut":0,"buzzType":"A","enable":false,"buzzName":"公司业务","subBuzzNames":["Aa:电费及发票业务","Ab:对公划账业务","Ac:预付费业务","Ad:用电变更业务","Ae:电表业务"]},
-        {"timeSpans":{},"alertTime":0,"finishTimeOut":0,"buzzType":"B","enable":true,"buzzName":"个人业务","subBuzzNames":["Ba:更名过户业务","Bb:银行划扣电费业务","Bc:电费及发票业务","Bd:低保免费电业务","Be:用电变更业务","Bf:电表业务"]},
-        {"timeSpans":{},"alertTime":0,"finishTimeOut":0,"buzzType":"C","enable":true,"buzzName":"新装及增容","subBuzzNames":["Ca:居民新装业务","Cb:居民增容业务","Cc:100kVA以下公司新装业务","Cd:100kVA以下公司增容业务","Ce:100kVA以上大客户业务"]},
-        {"timeSpans":{3: [{to: 165348, from: 165300}]},"alertTime":0,"finishTimeOut":0,"buzzType":"D","enable":true,"buzzName":"综合能源业务","subBuzzNames":["Da:居民业务","Db:100kVA以下公司业务","Dc:100kkVA以上大客户业务"]},
-        {"timeSpans":{},"alertTime":0,"finishTimeOut":0,"buzzType":"S","enable":true,"buzzName":"特殊叫号","subBuzzNames":[]},
-        {"timeSpans":{},"alertTime":0,"finishTimeOut":0,"buzzType":"V","enable":true,"buzzName":"VIP业务","subBuzzNames":[]}
+        {"timeSpans":{},"alertTime":0,"finishTimeOut":0,"buzzType":"A","enable":false,"buzzName":"公司业务","waitNum":"1","subBuzzNames":["Aa:电费及发票业务","Ab:对公划账业务","Ac:预付费业务","Ad:用电变更业务","Ae:电表业务"]},//
+        {"timeSpans":{},"alertTime":0,"finishTimeOut":0,"buzzType":"B","enable":true,"buzzName":"个人业务","waitNum":"100","subBuzzNames":["Ba:更名过户业务","Bb:银行划扣电费业务","Bc:电费及发票业务","Bd:低保免费电业务","Be:用电变更业务","Bf:电表业务"]},
+       {"timeSpans":{},"alertTime":0,"finishTimeOut":0,"buzzType":"C","enable":true,"buzzName":"新装及增容","waitNum":"15","subBuzzNames":["Ca:居民新装业务","Cb:居民增容业务","Cc:100kVA以下公司新装业务","Cd:100kVA以下公司增容业务","Ce:100kVA以上大客户业务"]},
+        {"timeSpans": {"3": [{"to": 120000, "from": 90000}, {"to": 170000, "from": 140000}], "5": [{"to": 140000, "from": 90000}]},"alertTime":0,"finishTimeOut":0,"buzzType":"D","enable":true,"buzzName":"综合能源业务","waitNum":"20","subBuzzNames":["Da:居民业务","Db:100kVA以下公司业务","Dc:100kkVA以上大客户业务"]},
+       // {"timeSpans":{},"alertTime":0,"finishTimeOut":0,"buzzType":"S","enable":true,"buzzName":"特殊叫号","subBuzzNames":[]},
+       // {"timeSpans":{},"alertTime":0,"finishTimeOut":0,"buzzType":"V","enable":true,"buzzName":"VIP业务","subBuzzNames":[]}
         ]
 }
 
